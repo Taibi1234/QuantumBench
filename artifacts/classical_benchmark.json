@@ -1,0 +1,517 @@
+{
+  "created_utc": "2026-10-29T19:18:44.473168+00:00",
+  "suite": "default_v1",
+  "heuristic_seed": 42,
+  "results": [
+    {
+      "instance": {
+        "instance_id": "n04_p0500_s0011",
+        "node_count": 4,
+        "edge_count": 2,
+        "edge_probability": 0.5,
+        "seed": 11,
+        "edges": [
+          {
+            "source": 0,
+            "target": 1,
+            "weight": 8
+          },
+          {
+            "source": 1,
+            "target": 2,
+            "weight": 9
+          }
+        ]
+      },
+      "exact": {
+        "optimal_value": 17.0,
+        "optimal_assignments": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "evaluated_assignments": 8
+      },
+      "heuristic": {
+        "best_value": 17.0,
+        "best_assignment": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "restarts": 20,
+        "improvement_steps": 17
+      },
+      "approximation_ratio": 1.0,
+      "optimal_found": true
+    },
+    {
+      "instance": {
+        "instance_id": "n06_p0400_s0022",
+        "node_count": 6,
+        "edge_count": 7,
+        "edge_probability": 0.4,
+        "seed": 22,
+        "edges": [
+          {
+            "source": 0,
+            "target": 2,
+            "weight": 3
+          },
+          {
+            "source": 0,
+            "target": 3,
+            "weight": 4
+          },
+          {
+            "source": 0,
+            "target": 5,
+            "weight": 1
+          },
+          {
+            "source": 1,
+            "target": 2,
+            "weight": 10
+          },
+          {
+            "source": 1,
+            "target": 4,
+            "weight": 8
+          },
+          {
+            "source": 2,
+            "target": 3,
+            "weight": 3
+          },
+          {
+            "source": 2,
+            "target": 5,
+            "weight": 2
+          }
+        ]
+      },
+      "exact": {
+        "optimal_value": 28.0,
+        "optimal_assignments": [
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "evaluated_assignments": 32
+      },
+      "heuristic": {
+        "best_value": 28.0,
+        "best_assignment": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "restarts": 20,
+        "improvement_steps": 33
+      },
+      "approximation_ratio": 1.0,
+      "optimal_found": true
+    },
+    {
+      "instance": {
+        "instance_id": "n06_p0700_s0033",
+        "node_count": 6,
+        "edge_count": 10,
+        "edge_probability": 0.7,
+        "seed": 33,
+        "edges": [
+          {
+            "source": 0,
+            "target": 1,
+            "weight": 10
+          },
+          {
+            "source": 0,
+            "target": 2,
+            "weight": 3
+          },
+          {
+            "source": 0,
+            "target": 4,
+            "weight": 4
+          },
+          {
+            "source": 0,
+            "target": 5,
+            "weight": 5
+          },
+          {
+            "source": 1,
+            "target": 4,
+            "weight": 8
+          },
+          {
+            "source": 1,
+            "target": 5,
+            "weight": 9
+          },
+          {
+            "source": 2,
+            "target": 3,
+            "weight": 9
+          },
+          {
+            "source": 2,
+            "target": 4,
+            "weight": 3
+          },
+          {
+            "source": 3,
+            "target": 4,
+            "weight": 10
+          },
+          {
+            "source": 3,
+            "target": 5,
+            "weight": 9
+          }
+        ]
+      },
+      "exact": {
+        "optimal_value": 57.0,
+        "optimal_assignments": [
+          [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        ],
+        "evaluated_assignments": 32
+      },
+      "heuristic": {
+        "best_value": 57.0,
+        "best_assignment": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "restarts": 20,
+        "improvement_steps": 49
+      },
+      "approximation_ratio": 1.0,
+      "optimal_found": true
+    },
+    {
+      "instance": {
+        "instance_id": "n08_p0500_s0044",
+        "node_count": 8,
+        "edge_count": 17,
+        "edge_probability": 0.5,
+        "seed": 44,
+        "edges": [
+          {
+            "source": 0,
+            "target": 1,
+            "weight": 7
+          },
+          {
+            "source": 0,
+            "target": 4,
+            "weight": 9
+          },
+          {
+            "source": 0,
+            "target": 5,
+            "weight": 9
+          },
+          {
+            "source": 0,
+            "target": 6,
+            "weight": 2
+          },
+          {
+            "source": 0,
+            "target": 7,
+            "weight": 3
+          },
+          {
+            "source": 1,
+            "target": 2,
+            "weight": 7
+          },
+          {
+            "source": 1,
+            "target": 3,
+            "weight": 4
+          },
+          {
+            "source": 1,
+            "target": 7,
+            "weight": 5
+          },
+          {
+            "source": 2,
+            "target": 3,
+            "weight": 1
+          },
+          {
+            "source": 2,
+            "target": 5,
+            "weight": 4
+          },
+          {
+            "source": 2,
+            "target": 6,
+            "weight": 2
+          },
+          {
+            "source": 3,
+            "target": 5,
+            "weight": 10
+          },
+          {
+            "source": 3,
+            "target": 6,
+            "weight": 1
+          },
+          {
+            "source": 3,
+            "target": 7,
+            "weight": 2
+          },
+          {
+            "source": 4,
+            "target": 6,
+            "weight": 3
+          },
+          {
+            "source": 5,
+            "target": 7,
+            "weight": 9
+          },
+          {
+            "source": 6,
+            "target": 7,
+            "weight": 5
+          }
+        ]
+      },
+      "exact": {
+        "optimal_value": 74.0,
+        "optimal_assignments": [
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        ],
+        "evaluated_assignments": 128
+      },
+      "heuristic": {
+        "best_value": 74.0,
+        "best_assignment": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "restarts": 20,
+        "improvement_steps": 50
+      },
+      "approximation_ratio": 1.0,
+      "optimal_found": true
+    },
+    {
+      "instance": {
+        "instance_id": "n08_p0800_s0055",
+        "node_count": 8,
+        "edge_count": 24,
+        "edge_probability": 0.8,
+        "seed": 55,
+        "edges": [
+          {
+            "source": 0,
+            "target": 1,
+            "weight": 2
+          },
+          {
+            "source": 0,
+            "target": 3,
+            "weight": 4
+          },
+          {
+            "source": 0,
+            "target": 4,
+            "weight": 3
+          },
+          {
+            "source": 0,
+            "target": 6,
+            "weight": 5
+          },
+          {
+            "source": 0,
+            "target": 7,
+            "weight": 2
+          },
+          {
+            "source": 1,
+            "target": 2,
+            "weight": 3
+          },
+          {
+            "source": 1,
+            "target": 3,
+            "weight": 5
+          },
+          {
+            "source": 1,
+            "target": 5,
+            "weight": 2
+          },
+          {
+            "source": 1,
+            "target": 6,
+            "weight": 6
+          },
+          {
+            "source": 1,
+            "target": 7,
+            "weight": 8
+          },
+          {
+            "source": 2,
+            "target": 3,
+            "weight": 9
+          },
+          {
+            "source": 2,
+            "target": 4,
+            "weight": 7
+          },
+          {
+            "source": 2,
+            "target": 5,
+            "weight": 7
+          },
+          {
+            "source": 2,
+            "target": 6,
+            "weight": 9
+          },
+          {
+            "source": 2,
+            "target": 7,
+            "weight": 7
+          },
+          {
+            "source": 3,
+            "target": 4,
+            "weight": 6
+          },
+          {
+            "source": 3,
+            "target": 5,
+            "weight": 7
+          },
+          {
+            "source": 3,
+            "target": 6,
+            "weight": 9
+          },
+          {
+            "source": 3,
+            "target": 7,
+            "weight": 1
+          },
+          {
+            "source": 4,
+            "target": 5,
+            "weight": 5
+          },
+          {
+            "source": 4,
+            "target": 7,
+            "weight": 1
+          },
+          {
+            "source": 5,
+            "target": 6,
+            "weight": 4
+          },
+          {
+            "source": 5,
+            "target": 7,
+            "weight": 9
+          },
+          {
+            "source": 6,
+            "target": 7,
+            "weight": 1
+          }
+        ]
+      },
+      "exact": {
+        "optimal_value": 90.0,
+        "optimal_assignments": [
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1
+          ]
+        ],
+        "evaluated_assignments": 128
+      },
+      "heuristic": {
+        "best_value": 90.0,
+        "best_assignment": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "restarts": 20,
+        "improvement_steps": 50
+      },
+      "approximation_ratio": 1.0,
+      "optimal_found": true
+    }
+  ]
+}
