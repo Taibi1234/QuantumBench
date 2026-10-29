@@ -10,17 +10,20 @@ The research question is:
 
 ## Current status
 
-The project currently provides:
+Implemented:
 
 - Seeded weighted random graph generation
 - A reusable five-instance benchmark suite
-- Cut-value calculation
-- An exact brute-force Max-Cut solver
-- A multi-start local-search heuristic
-- Approximation-ratio and optimal-solution comparisons
+- Exact brute-force Max-Cut solutions
+- Multi-start local-search heuristic solutions
+- Weighted Max-Cut Hamiltonian construction
+- Ideal state-vector QAOA simulation
+- Classical optimization of QAOA parameters
+- Final bitstring sampling
+- Expected, sampled, and optimal-solution metrics
 - Automated correctness and reproducibility tests
 
-QAOA simulation and noisy experiments will be added in later milestones.
+No IBM Quantum account or physical quantum computer is required.
 
 ## Setup
 
@@ -30,33 +33,50 @@ py -3.12 -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-## Run a single exact experiment
+## Classical experiments
+
+Run one exact experiment:
 
 ```powershell
 python -m scripts.solve_classical --nodes 6 --probability 0.5 --seed 42
 ```
 
-Results are saved to `artifacts/classical_baseline.json`.
-
-## Run the classical benchmark
+Run the exact-versus-heuristic suite:
 
 ```powershell
 python -m scripts.run_classical_benchmark --restarts 20 --seed 42
 ```
 
-Results are saved to `artifacts/classical_benchmark.json`.
+## Ideal QAOA experiment
 
-For each instance, the benchmark records:
+```powershell
+python -m scripts.run_qaoa_ideal --nodes 6 --probability 0.5 --seed 42 --reps 1 --shots 1024 --maxiter 100
+```
 
-- Exact optimal cut value and assignments
-- Heuristic best value and assignment
-- Heuristic restart and improvement counts
-- Approximation ratio
-- Whether the heuristic found an optimal value
+Results are saved to `artifacts/qaoa_ideal.json`.
 
-An approximation ratio of `1.0` means the heuristic reached the optimum.
-Heuristic results do not prove optimality; the exact solver provides the
-reference value for these small instances.
+The experiment records:
+
+- Exact optimal value
+- Optimized QAOA parameters
+- Expected cost and expected cut value
+- Sampled mean and best sampled cut values
+- Optimal sample probability
+- Measurement counts
+- Objective history
+- Circuit depth and runtime
+
+`reps` controls the QAOA depth. Increasing it adds more parameters and
+circuit operations but does not guarantee a better result after optimization.
+
+## Evaluation metrics
+
+- **Expected approximation ratio:** expected cut value divided by optimum
+- **Sampled approximation ratio:** sampled mean or best value divided by optimum
+- **Optimal sample probability:** fraction of shots producing an optimal assignment
+
+These metrics measure different properties and should not be treated as
+interchangeable.
 
 ## Tests
 
@@ -66,7 +86,8 @@ python -m pytest -q
 
 ## Limitations
 
-- The exact solver has exponential runtime and is only for small instances.
-- Local search can stop at a non-optimal local maximum.
-- The current benchmark uses small synthetic weighted graphs.
-- The project does not assume or claim quantum advantage.
+- Exact classical solving has exponential runtime.
+- State-vector simulation has exponential memory requirements.
+- Small simulated experiments do not demonstrate quantum advantage.
+- QAOA optimization can converge to poor local parameter choices.
+- Ideal simulation does not include hardware noise.
