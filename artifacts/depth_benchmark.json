@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-31T13:43:49.202692+00:00",
+  "created_utc": "2026-11-01T10:19:08.622171+00:00",
   "simulation": "ideal_statevector",
   "configuration": {
     "reps": [
@@ -173,8 +173,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 1.8758472999907099
+                "circuit_depth": 14,
+                "runtime_seconds": 1.6070169999729842
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8081002270524577,
@@ -290,8 +290,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 2.1381140000012238
+                "circuit_depth": 14,
+                "runtime_seconds": 2.4104387999977916
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8257047528244114,
@@ -406,8 +406,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 1.3663474000059068
+                "circuit_depth": 14,
+                "runtime_seconds": 1.4523635000223294
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8139443378921916,
@@ -425,8 +425,8 @@
             "sampled_ratio_std": 0.005596346118018432,
             "optimal_probability_mean": 0.6569010416666666,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 1.7934362333326135,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 1.8232730999977018,
+            "circuit_depth": 14
           }
         },
         "2": {
@@ -583,8 +583,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 5.2245063000009395
+                "circuit_depth": 25,
+                "runtime_seconds": 5.755856200004928
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6739241460321859,
@@ -745,8 +745,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 7.050781800004188
+                "circuit_depth": 25,
+                "runtime_seconds": 7.010518499999307
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8375838587484653,
@@ -907,8 +907,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 15.972776800015708
+                "circuit_depth": 25,
+                "runtime_seconds": 6.713596000045072
               },
               "analysis": {
                 "expected_approximation_ratio": 0.736780392630977,
@@ -926,8 +926,8 @@
             "sampled_ratio_std": 0.07001193035572106,
             "optimal_probability_mean": 0.5247395833333334,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 9.416021633340279,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 6.493323566683102,
+            "circuit_depth": 25
           }
         },
         "3": {
@@ -1082,8 +1082,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 15.78370180001366
+                "circuit_depth": 36,
+                "runtime_seconds": 9.198174899967853
               },
               "analysis": {
                 "expected_approximation_ratio": 0.9919684632033627,
@@ -1247,8 +1247,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 7.260476399998879
+                "circuit_depth": 36,
+                "runtime_seconds": 6.457795199996326
               },
               "analysis": {
                 "expected_approximation_ratio": 0.893634140923375,
@@ -1410,8 +1410,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 10.181063500000164
+                "circuit_depth": 36,
+                "runtime_seconds": 9.691340199962724
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7678587702223686,
@@ -1429,8 +1429,8 @@
             "sampled_ratio_std": 0.0935619697412296,
             "optimal_probability_mean": 0.7692057291666666,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 11.0750805666709,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 8.449103433308968,
+            "circuit_depth": 36
           }
         }
       }
@@ -1701,8 +1701,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 11.09134269997594
+                "circuit_depth": 20,
+                "runtime_seconds": 11.199361799983308
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6069050402794842,
@@ -1858,8 +1858,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 7.9363049999810755
+                "circuit_depth": 20,
+                "runtime_seconds": 8.016250100045
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7406132622724316,
@@ -2061,8 +2061,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 11.353070300014224
+                "circuit_depth": 20,
+                "runtime_seconds": 11.57806349999737
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6207916733902693,
@@ -2080,8 +2080,8 @@
             "sampled_ratio_std": 0.06370845790398774,
             "optimal_probability_mean": 0.025716145833333332,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 10.126905999990413,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 10.264558466675226,
+            "circuit_depth": 20
           }
         },
         "2": {
@@ -2280,8 +2280,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 21.384551299997838
+                "circuit_depth": 37,
+                "runtime_seconds": 21.614292799960822
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8053310976771959,
@@ -2486,8 +2486,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 17.69943079998484
+                "circuit_depth": 37,
+                "runtime_seconds": 17.405563100008294
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7767312484039843,
@@ -2690,8 +2690,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 22.12826839997433
+                "circuit_depth": 37,
+                "runtime_seconds": 22.94981189997634
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7240120159453066,
@@ -2709,8 +2709,8 @@
             "sampled_ratio_std": 0.033644296672850085,
             "optimal_probability_mean": 0.07877604166666667,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 20.40408349998567,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 20.65655593331515,
+            "circuit_depth": 37
           }
         },
         "3": {
@@ -2913,8 +2913,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 36.43415939999977
+                "circuit_depth": 54,
+                "runtime_seconds": 42.02333449997241
               },
               "analysis": {
                 "expected_approximation_ratio": 0.8033756626888809,
@@ -3124,8 +3124,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 34.66653159999987
+                "circuit_depth": 54,
+                "runtime_seconds": 54.208397200040054
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7227835591034583,
@@ -3338,8 +3338,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 30.75073080000584
+                "circuit_depth": 54,
+                "runtime_seconds": 32.18247199995676
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6662162505564765,
@@ -3357,8 +3357,8 @@
             "sampled_ratio_std": 0.05071979439058837,
             "optimal_probability_mean": 0.11881510416666667,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 33.95047393333516,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 42.80473456665641,
+            "circuit_depth": 54
           }
         }
       }
@@ -3641,8 +3641,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 14.383281399990665
+                "circuit_depth": 29,
+                "runtime_seconds": 15.532404700003099
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6542707567700207,
@@ -3817,8 +3817,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 8.343797400011681
+                "circuit_depth": 29,
+                "runtime_seconds": 9.34656559996074
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6335207407535524,
@@ -4022,8 +4022,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 14.307781399984378
+                "circuit_depth": 29,
+                "runtime_seconds": 13.97992680000607
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6417218145694915,
@@ -4041,8 +4041,8 @@
             "sampled_ratio_std": 0.007858357297314858,
             "optimal_probability_mean": 0.060221354166666664,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 12.344953399995575,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 12.952965699989969,
+            "circuit_depth": 29
           }
         },
         "2": {
@@ -4242,8 +4242,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 26.086326399992686
+                "circuit_depth": 49,
+                "runtime_seconds": 25.27004809997743
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7659579664819587,
@@ -4451,8 +4451,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 20.91290230001323
+                "circuit_depth": 49,
+                "runtime_seconds": 20.045006199972704
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7296537476573041,
@@ -4658,8 +4658,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 26.241392700001597
+                "circuit_depth": 49,
+                "runtime_seconds": 23.69470240001101
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7127604430530449,
@@ -4677,8 +4677,8 @@
             "sampled_ratio_std": 0.02130959725319032,
             "optimal_probability_mean": 0.1181640625,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 24.413540466669172,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 23.00325223332038,
+            "circuit_depth": 49
           }
         },
         "3": {
@@ -4880,8 +4880,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 29.738500100007514
+                "circuit_depth": 69,
+                "runtime_seconds": 30.63731259998167
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7308694413817443,
@@ -5092,8 +5092,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 42.82374410002376
+                "circuit_depth": 69,
+                "runtime_seconds": 46.077524700027425
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6806251664709503,
@@ -5304,8 +5304,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 36.11494669999229
+                "circuit_depth": 69,
+                "runtime_seconds": 39.16691749996971
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7424938336722205,
@@ -5323,8 +5323,8 @@
             "sampled_ratio_std": 0.02643615061722417,
             "optimal_probability_mean": 0.05859375,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 36.225730300007854,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 38.62725159999294,
+            "circuit_depth": 69
           }
         }
       }
@@ -5763,8 +5763,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 62.762916100007715
+                "circuit_depth": 38,
+                "runtime_seconds": 72.40360449999571
               },
               "analysis": {
                 "expected_approximation_ratio": 0.5907073063584226,
@@ -6115,8 +6115,8 @@
                 ],
                 "optimizer_success": true,
                 "optimizer_message": "Return from COBYLA because the trust region radius reaches its lower bound.",
-                "circuit_depth": 1,
-                "runtime_seconds": 58.44238480000058
+                "circuit_depth": 38,
+                "runtime_seconds": 66.47271369997179
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6019971006156954,
@@ -6463,8 +6463,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 67.74016680000932
+                "circuit_depth": 38,
+                "runtime_seconds": 71.99581629998283
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6225243546870931,
@@ -6482,8 +6482,8 @@
             "sampled_ratio_std": 0.01596299091715874,
             "optimal_probability_mean": 0.011393229166666666,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 62.98182256667254,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 70.29071149998344,
+            "circuit_depth": 38
           }
         },
         "2": {
@@ -6837,8 +6837,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 155.26862660000916
+                "circuit_depth": 61,
+                "runtime_seconds": 181.34230819996446
               },
               "analysis": {
                 "expected_approximation_ratio": 0.608430383977933,
@@ -7168,8 +7168,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 146.89122309998493
+                "circuit_depth": 61,
+                "runtime_seconds": 153.56973699998343
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6621980046225213,
@@ -7506,8 +7506,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 148.56165390001843
+                "circuit_depth": 61,
+                "runtime_seconds": 160.6346717000124
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6104891115876917,
@@ -7525,8 +7525,8 @@
             "sampled_ratio_std": 0.025474104783861574,
             "optimal_probability_mean": 0.020833333333333332,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 150.24050120000416,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 165.18223896665344,
+            "circuit_depth": 61
           }
         },
         "3": {
@@ -7834,8 +7834,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 181.45219169999473
+                "circuit_depth": 87,
+                "runtime_seconds": 177.83468299999367
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7573165362670996,
@@ -8191,8 +8191,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 193.45228719999432
+                "circuit_depth": 87,
+                "runtime_seconds": 185.19534599996405
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6354682194976631,
@@ -8536,8 +8536,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 210.68910009998945
+                "circuit_depth": 87,
+                "runtime_seconds": 201.351351899968
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6533578849970378,
@@ -8555,8 +8555,8 @@
             "sampled_ratio_std": 0.05172078445950652,
             "optimal_probability_mean": 0.08463541666666667,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 195.1978596666595,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 188.1271269666419,
+            "circuit_depth": 87
           }
         }
       }
@@ -9062,8 +9062,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 85.63220900000306
+                "circuit_depth": 44,
+                "runtime_seconds": 81.94368239998585
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7032365226165578,
@@ -9414,8 +9414,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 90.60788749999483
+                "circuit_depth": 44,
+                "runtime_seconds": 81.97017859999323
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6933543106245333,
@@ -9762,8 +9762,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 77.05884840001818
+                "circuit_depth": 44,
+                "runtime_seconds": 76.4032184999669
               },
               "analysis": {
                 "expected_approximation_ratio": 0.6981160613570108,
@@ -9781,8 +9781,8 @@
             "sampled_ratio_std": 0.007997863934376874,
             "optimal_probability_mean": 0.0068359375,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 84.43298163333868,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 80.10569316664866,
+            "circuit_depth": 44
           }
         },
         "2": {
@@ -10137,8 +10137,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 145.03912600001786
+                "circuit_depth": 73,
+                "runtime_seconds": 144.26434860000154
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7175068402768361,
@@ -10494,8 +10494,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 153.33891240000958
+                "circuit_depth": 73,
+                "runtime_seconds": 151.0953730000183
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7120752358698991,
@@ -10857,8 +10857,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 134.8778811999946
+                "circuit_depth": 73,
+                "runtime_seconds": 134.4729920999962
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7123027125779123,
@@ -10876,8 +10876,8 @@
             "sampled_ratio_std": 0.005938697844487111,
             "optimal_probability_mean": 0.027018229166666668,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 144.418639866674,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 143.27757123333868,
+            "circuit_depth": 73
           }
         },
         "3": {
@@ -11233,8 +11233,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 185.38227299999562
+                "circuit_depth": 102,
+                "runtime_seconds": 184.97312959999545
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7132155833784595,
@@ -11575,8 +11575,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 210.048512999987
+                "circuit_depth": 102,
+                "runtime_seconds": 209.2790410000016
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7721645361407388,
@@ -11924,8 +11924,8 @@
                 ],
                 "optimizer_success": false,
                 "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-                "circuit_depth": 1,
-                "runtime_seconds": 233.50291470001685
+                "circuit_depth": 102,
+                "runtime_seconds": 232.46869060001336
               },
               "analysis": {
                 "expected_approximation_ratio": 0.7221839778167078,
@@ -11943,8 +11943,8 @@
             "sampled_ratio_std": 0.02514221546156582,
             "optimal_probability_mean": 0.018880208333333332,
             "best_sampled_ratio": 1.0,
-            "runtime_seconds_mean": 209.64456689999983,
-            "circuit_depth": 1
+            "runtime_seconds_mean": 208.9069537333368,
+            "circuit_depth": 102
           }
         }
       }

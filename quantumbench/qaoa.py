@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 import networkx as nx
 import numpy as np
+from qiskit import transpile
 from qiskit.circuit.library import QAOAAnsatz
 from qiskit.quantum_info import SparsePauliOp, Statevector
 from scipy.optimize import minimize
@@ -50,6 +51,16 @@ def build_maxcut_hamiltonian(graph: nx.Graph) -> SparsePauliOp:
         terms,
         num_qubits=len(graph),
     )
+
+
+def transpiled_circuit_depth(circuit) -> int:
+    """Return depth after decomposition into the experiment's basis gates."""
+    transpiled_circuit = transpile(
+        circuit,
+        basis_gates=["rz", "sx", "x", "cx"],
+        optimization_level=1,
+    )
+    return transpiled_circuit.depth()
 
 
 def bitstring_to_assignment(bitstring: str) -> tuple[int, ...]:
@@ -199,6 +210,6 @@ def solve_qaoa_ideal(
         objective_history=objective_history,
         optimizer_success=bool(optimization_result.success),
         optimizer_message=str(optimization_result.message),
-        circuit_depth=optimized_circuit.depth(),
+        circuit_depth=transpiled_circuit_depth(optimized_circuit),
         runtime_seconds=time.perf_counter() - started,
     )

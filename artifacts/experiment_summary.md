@@ -6,9 +6,9 @@ This file is generated from the recorded depth and noise studies.
 
 | Depth | Instances | Mean expected ratio | Mean optimal probability | Mean runtime (s) | Mean circuit depth |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 5 | 0.6837 | 0.1522 | 34.3360 | 1.00 |
-| 2 | 5 | 0.7190 | 0.1539 | 69.7786 | 1.00 |
-| 3 | 5 | 0.7502 | 0.2100 | 97.2187 | 1.00 |
+| 1 | 5 | 0.6837 | 0.1522 | 35.0874 | 29.00 |
+| 2 | 5 | 0.7190 | 0.1539 | 71.7226 | 49.00 |
+| 3 | 5 | 0.7502 | 0.2100 | 97.3830 | 69.60 |
 
 The highest mean expected ratio occurred at p=3. This is a descriptive result, not a significance test.
 

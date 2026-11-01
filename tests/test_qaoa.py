@@ -1,11 +1,13 @@
 import networkx as nx
 import numpy as np
 import pytest
+from qiskit.circuit.library import QAOAAnsatz
 
 from quantumbench.qaoa import (
     bitstring_to_assignment,
     build_maxcut_hamiltonian,
     solve_qaoa_ideal,
+    transpiled_circuit_depth,
 )
 
 
@@ -33,6 +35,20 @@ def test_bitstring_conversion():
     assert bitstring_to_assignment("011") == (1, 1, 0)
 
 
+def test_transpiled_depth_increases_with_qaoa_reps():
+    hamiltonian = build_maxcut_hamiltonian(make_triangle())
+
+    depth_one = transpiled_circuit_depth(
+        QAOAAnsatz(cost_operator=hamiltonian, reps=1)
+    )
+    depth_two = transpiled_circuit_depth(
+        QAOAAnsatz(cost_operator=hamiltonian, reps=2)
+    )
+
+    assert depth_one > 1
+    assert depth_two > depth_one
+
+
 def test_ideal_qaoa_produces_valid_results():
     result = solve_qaoa_ideal(
         make_triangle(),
@@ -45,7 +61,7 @@ def test_ideal_qaoa_produces_valid_results():
     assert sum(result.counts.values()) == 128
     assert 0.0 <= result.expected_cut_value <= 2.0
     assert 0.0 <= result.best_sampled_value <= 2.0
-    assert result.circuit_depth > 0
+    assert result.circuit_depth > 1
     assert len(result.objective_history) > 0
 
 
@@ -72,3 +88,4 @@ def test_ideal_qaoa_is_reproducible():
     assert first.expected_cut_value == pytest.approx(
         second.expected_cut_value
     )
+    assert first.circuit_depth == second.circuit_depth
