@@ -8,9 +8,7 @@ The research question is:
 &gt; How do QAOA depth, sampling, and simulated noise affect solution quality
 &gt; on small weighted Max-Cut instances compared with classical algorithms?
 
-## Current status
-
-Implemented:
+## Implemented
 
 - Seeded weighted random graph generation
 - A reusable five-instance benchmark suite
@@ -20,7 +18,8 @@ Implemented:
 - Ideal state-vector QAOA simulation
 - Classical optimization of QAOA parameters
 - Final bitstring sampling
-- Expected, sampled, and optimal-solution metrics
+- Multi-run QAOA depth comparisons
+- Aggregated approximation, probability, runtime, and circuit-depth metrics
 - Automated correctness and reproducibility tests
 
 No IBM Quantum account or physical quantum computer is required.
@@ -47,7 +46,7 @@ Run the exact-versus-heuristic suite:
 python -m scripts.run_classical_benchmark --restarts 20 --seed 42
 ```
 
-## Ideal QAOA experiment
+## Single ideal QAOA experiment
 
 ```powershell
 python -m scripts.run_qaoa_ideal --nodes 6 --probability 0.5 --seed 42 --reps 1 --shots 1024 --maxiter 100
@@ -55,28 +54,36 @@ python -m scripts.run_qaoa_ideal --nodes 6 --probability 0.5 --seed 42 --reps 1 
 
 Results are saved to `artifacts/qaoa_ideal.json`.
 
-The experiment records:
+## QAOA depth benchmark
 
-- Exact optimal value
-- Optimized QAOA parameters
-- Expected cost and expected cut value
-- Sampled mean and best sampled cut values
-- Optimal sample probability
-- Measurement counts
-- Objective history
-- Circuit depth and runtime
+```powershell
+python -m scripts.run_depth_benchmark --reps 1 2 3 --runs 3 --shots 1024 --maxiter 100 --seed 42
+```
 
-`reps` controls the QAOA depth. Increasing it adds more parameters and
-circuit operations but does not guarantee a better result after optimization.
+Results are saved to `artifacts/depth_benchmark.json`.
+
+The default configuration evaluates five graph instances, three QAOA depths,
+and three seeded optimization runs per depth, for 45 total QAOA runs.
+
+Each depth summary includes:
+
+- Mean and standard deviation of expected approximation ratio
+- Mean and standard deviation of sampled approximation ratio
+- Mean optimal-sample probability
+- Best sampled approximation ratio
+- Mean runtime
+- Circuit depth
+
+Increasing QAOA depth adds parameters and circuit operations. It does not
+guarantee better optimization or better sampled solutions.
 
 ## Evaluation metrics
 
 - **Expected approximation ratio:** expected cut value divided by optimum
 - **Sampled approximation ratio:** sampled mean or best value divided by optimum
-- **Optimal sample probability:** fraction of shots producing an optimal assignment
+- **Optimal-sample probability:** fraction of shots producing an optimal assignment
 
-These metrics measure different properties and should not be treated as
-interchangeable.
+These metrics measure different properties and are not interchangeable.
 
 ## Tests
 
@@ -91,3 +98,4 @@ python -m pytest -q
 - Small simulated experiments do not demonstrate quantum advantage.
 - QAOA optimization can converge to poor local parameter choices.
 - Ideal simulation does not include hardware noise.
+- Multiple runs reduce single-run sensitivity but do not eliminate local-optimizer bias.
