@@ -10,15 +10,14 @@ The research question is:
 
 ## Implemented
 
-- Seeded weighted random graph generation
-- A reusable five-instance benchmark suite
+- Seeded weighted graph generation and a reusable benchmark suite
 - Exact brute-force and multi-start heuristic classical solvers
 - Weighted Max-Cut Hamiltonian construction
-- Ideal state-vector QAOA simulation
-- Classical optimization of QAOA parameters
-- Multi-run comparisons of QAOA depths 1, 2, and 3
-- Approximation-ratio, success-probability, runtime, and circuit-depth metrics
-- Automated result visualization
+- Ideal state-vector QAOA simulation and parameter optimization
+- Multi-run QAOA depth comparisons
+- Approximation, success-probability, runtime, and circuit-depth metrics
+- Automated depth-study visualization
+- Controlled one- and two-qubit depolarizing-noise simulations
 - Automated correctness and reproducibility tests
 
 No IBM Quantum account or physical quantum computer is required.
@@ -38,56 +37,61 @@ python -m scripts.solve_classical --nodes 6 --probability 0.5 --seed 42
 python -m scripts.run_classical_benchmark --restarts 20 --seed 42
 ```
 
-## Single ideal QAOA experiment
+## Ideal QAOA experiments
+
+Single experiment:
 
 ```powershell
 python -m scripts.run_qaoa_ideal --nodes 6 --probability 0.5 --seed 42 --reps 1 --shots 1024 --maxiter 100
 ```
 
-Results are saved to `artifacts/qaoa_ideal.json`.
-
-## QAOA depth benchmark
+Depth study:
 
 ```powershell
 python -m scripts.run_depth_benchmark --reps 1 2 3 --runs 3 --shots 1024 --maxiter 100 --seed 42
 ```
 
-The default configuration evaluates five instances, three depths, and three
-seeded runs per depth, for 45 total QAOA optimization runs.
-
-Results are saved to `artifacts/depth_benchmark.json`.
-
-## Generate figures
+Generate depth-study figures:
 
 ```powershell
 python -m scripts.plot_depth_results --reps 1
 ```
 
-Generated figures:
-
-- `artifacts/figures/approximation_ratio_by_depth.png`
-- `artifacts/figures/optimal_probability_by_depth.png`
-- `artifacts/figures/runtime_and_circuit_depth.png`
-- `artifacts/figures/qaoa_convergence.png`
-
-To plot convergence for a different instance:
+## Noise study
 
 ```powershell
-python -m scripts.plot_depth_results --instance INSTANCE_ID --reps 2
+python -m scripts.run_noise_benchmark --nodes 6 --probability 0.5 --seed 42 --reps 1 --shots 1024 --runs 5
 ```
 
-Instance identifiers are recorded in the benchmark JSON.
+Results are saved to `artifacts/noise_benchmark.json`.
+
+The experiment first optimizes parameters under ideal conditions. It then
+holds those parameters fixed while evaluating four noise configurations:
+
+| Level | One-qubit error | Two-qubit error |
+|---|---:|---:|
+| None | 0.000 | 0.000 |
+| Low | 0.001 | 0.010 |
+| Medium | 0.005 | 0.030 |
+| High | 0.010 | 0.050 |
+
+Holding parameters fixed helps isolate noise effects from optimizer variation.
+Each configuration is sampled repeatedly to capture finite-shot variation.
+
+The simplified model applies depolarizing channels to SX, X, and CX gates.
+RZ is treated as virtual. Measurement error, thermal relaxation, crosstalk,
+and device-specific calibration are not modeled.
 
 ## Evaluation metrics
 
-- **Expected approximation ratio:** expected cut value divided by optimum
-- **Sampled approximation ratio:** sampled value divided by optimum
-- **Optimal-sample probability:** fraction of shots producing an optimal assignment
-- **Runtime:** local wall-clock duration of one QAOA experiment
-- **Circuit depth:** depth of the optimized QAOA circuit
+- Expected and sampled approximation ratios
+- Optimal-sample probability
+- Circuit depth
+- Local runtime
+- Mean and standard deviation across repeated runs
 
-These measurements describe small simulations and should not be interpreted
-as evidence of quantum advantage.
+Higher depth or higher noise does not guarantee a particular result in every
+individual run. Conclusions should be based on aggregated experiments.
 
 ## Tests
 
@@ -97,8 +101,8 @@ python -m pytest -q
 
 ## Limitations
 
-- Exact classical solving has exponential runtime.
-- State-vector simulation has exponential memory requirements.
+- Exact classical solving and state-vector simulation scale exponentially.
+- Small simulated experiments do not demonstrate quantum advantage.
 - QAOA optimization can converge to poor local parameter choices.
-- Ideal simulation does not include hardware noise.
-- Runtime measurements depend on the computer and background workload.
+- The noise model is simplified and is not a specific hardware model.
+- Runtime measurements depend on the local computer.
